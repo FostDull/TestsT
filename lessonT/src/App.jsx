@@ -1,18 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import AppProviders from "./app/AppProviders";
+import AppRoutes from "./app/routes";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <button
-      type="button"
-      className="counter"
-      onClick={() => setCount((count) => count + 1)}
-    >
-      Count is {count}
-    </button>
-  )
+    <AppProviders>
+      <AppRoutes />
+    </AppProviders>
+  );
 }
 
-export default App
+export default App;
